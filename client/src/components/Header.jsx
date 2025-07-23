@@ -5,12 +5,11 @@ export default function Header() {
   return (
     <header className=" bg-slate-200 shadow-md">
       <div className="flex justify-between items-center max-w-6xl mx-auto p-3">
-        <Link to='/'>
-        
-        <h1 className=" font-bold text-sm sm:text-xl flex flex-wrap">
-          <span className="text-slate-500">Sahand</span>
-          <span className="text-slate-700">Estaate</span>
-        </h1>
+        <Link to="/">
+          <h1 className=" font-bold text-sm sm:text-xl flex flex-wrap">
+            <span className="text-slate-500">Sahand</span>
+            <span className="text-slate-700">Estaate</span>
+          </h1>
         </Link>
         <form className="bg-slate-100 p-3 rounded-lg flex items-center">
           <input
@@ -21,22 +20,19 @@ export default function Header() {
           <FaSearch className="text-slate-600" />
         </form>
         <ul className="gap-4 flex">
-            <Link to='/'>
+          <Link to="/">
             <li className="hidden sm:inline text-slate-700 hover:underline">
-                Home
+              Home
             </li>
-            </Link>
-            <Link to='/about'>
-            
+          </Link>
+          <Link to="/about">
             <li className="hidden sm:inline text-slate-700 hover:underline">
-                About
+              About
             </li>
-            </Link>
-            <Link to='/sign-in'>
-            <li className=" text-slate-700 hover:underline">
-                Sign in
-            </li>
-            </Link>
+          </Link>
+          <Link to="/sign-in">
+            <li className=" text-slate-700 hover:underline">Sign in</li>
+          </Link>
         </ul>
       </div>
     </header>
