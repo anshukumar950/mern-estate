@@ -2,13 +2,13 @@ import { useState } from "react";
 import { Link,useNavigate } from "react-router-dom";
 
 export default function SignIn() {
-  const [fromData, setFromData] = useState({});
+  const [formData, setFormData] = useState({});
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const handleChange = (e) => {
-    setFromData({
-      ...fromData,
+    setFormData({
+      ...formData,
       [e.target.id]: e.target.value,
     });
   };
@@ -22,7 +22,7 @@ export default function SignIn() {
         headers: {
           "content-Type": "application/json",
         },
-        body: JSON.stringify(fromData),
+        body: JSON.stringify(formData),
       });
       const data = await res.json();
       if (data.success === false) {
